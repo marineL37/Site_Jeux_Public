@@ -1,0 +1,595 @@
+
+/* GENERAL */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300i,400,400i,500i,700,700i&display=swap');
+html
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+body
+{
+    background: url('../images/background.jpeg') no-repeat;
+    background-size: cover;
+}
+
+.container
+{
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    min-height: calc(100vh - 72px);
+}
+
+/* GENERAL : Menu de navigation */
+header .menuNav_1 ul
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background-color: #114365;
+    
+}
+header .menuNav_1 a, header .menuNav_1 li
+{
+    text-decoration: none;
+    color: #EE522F;
+    font-weight: bold;
+}
+
+
+header .menuNav_2 ul
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 30px;
+    background-color: #0A2F46;
+}
+header .menuNav_2 a
+{
+    text-decoration: none;
+    color: #3A80A7;
+}
+header .menuNav_2 a:hover
+{
+    color: white;
+}
+
+li
+{
+    list-style-type: none;
+}
+
+/* CONNEXION ET INSCRIPTION */
+.bienvenue
+{
+    text-align: center;
+}
+.formulaires 
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+    color: #0A2F46;
+}
+.form_connexion, .form_inscription 
+{
+    border: black 1px solid;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px #222;
+    background: #3A80A7;
+}
+.form_connexion
+{
+    flex: 1;
+    margin: 0 3%;
+}
+.form_inscription
+{
+    flex: 1.5;
+    margin: auto 3%;
+}
+.form_connexion fieldset p
+{
+    display: flex;
+    flex-direction: column;
+    margin: 40px 10px 30px 10px;
+    text-align: center;
+    line-height: 2;
+}
+
+.form_inscription fieldset p 
+{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+}
+.form_connexion p, .form_inscription p 
+{
+    text-align: center;
+}
+.btn_connexion
+{
+    text-align: center;
+    margin: 10px;
+    border: 1px solid black;
+}
+fieldset label
+{
+    line-height: 30px;
+}
+
+.connexionOK, .erreur_inscription, .erreur_connexion
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 2%;
+}
+
+.lien_inscription
+{
+    font-size: 20px;   
+}
+
+.msg_mdp
+{
+    font-style: italic;
+}
+
+/* ACCUEIL */
+.msg_accueil
+{
+    font-weight: bold;
+    text-align: center;
+    margin: 2% auto;
+}
+.bloc_img img
+{
+    height: 200px;
+    width: auto;
+    border-radius: 20px;
+}
+
+.bloc_img .img_citrouille
+{
+    transition: 0.3s;
+}
+
+.bloc_img .img_citrouille:hover
+{
+    border-radius: 20px;
+    border: 1px solid #EE522F;
+    box-shadow: 6px 6px 2px #EE522F;
+}
+
+.bloc_img .img_laby
+{
+    transition: 0.3s;
+}
+.bloc_img .img_laby:hover
+{
+    border-radius: 20px;
+    border: 1px solid #543B7D;
+    box-shadow: 6px 6px 2px #543B7D;
+}
+
+.bloc_img .img_pendu
+{
+    transition: 0.3s;
+}
+.bloc_img .img_pendu:hover
+{
+    border-radius: 20px;
+    border: 1px solid #63180E;
+    box-shadow: 6px 6px 2px #63180E;
+}
+
+.bloc_img
+{
+    display: flex;
+    justify-content: space-around;
+    margin: 5% auto;
+}
+
+
+
+/* CITROUILLES */
+*, *:before, *:after {
+    box-sizing: inherit;
+    }
+    .regles_tapeCitrouilles
+    {
+        font-weight: bold;
+        text-align: center;
+        margin: 2% auto;
+    }
+    .bloc_scores
+    {
+        display: flex;
+        width: auto;
+        margin: auto;
+        margin-bottom: 20px;
+        justify-content: space-around;
+        align-items: center;
+        line-height: 2;
+        font-size: 18px;
+        font-weight: bold;
+        color: #3A80A7;
+    }
+    .bloc_scores span
+    {
+        color: #EE522F;
+    }
+    .plateau_jeu 
+    {
+        cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2471378/hammer.png), auto;
+        height: 200px;
+        width: 800px;
+        background: green;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    
+    .trou 
+    {
+        flex: 1 0 33.33%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .trou::after 
+    {
+        display: block;
+        background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2471378/dirt.svg') bottom center no-repeat;
+        background-size: contain;
+        content: '';
+        width: 100%;
+        height: 70px;
+        position: absolute;
+        z-index: 2;
+        bottom: -30px;
+    }
+    
+    .trou.up .citrouille 
+    {
+        top: 0;
+    }
+    
+    .citrouille 
+    {
+        background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2471378/pumpkin.png') bottom center no-repeat;
+        background-size: 60%;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 100%;
+        transition: all 0.4s;
+    }
+    
+    .btn_jouer 
+    {
+        font-family: cursive;
+        display: inline-block;
+        text-decoration: none;
+        border: 0;
+        background: #EE522F;
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 0.5rem 2rem;
+        cursor: pointer;
+    }
+    
+    .btn_jouer:hover 
+    {
+        opacity: 0.8;
+    }
+
+
+
+    /* LABYRINTHE */
+.score_laby
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 5% 0 5%;
+}
+.score_laby .gagne
+{
+    color: #3A80A7;
+}
+.score_laby .perdu
+{
+    color: #EE522F;
+}
+
+.choix_laby
+{
+    line-height: 30px;
+    text-align: center;
+}
+
+.choix_laby li
+{
+    text-transform: capitalize;
+}
+
+.form_laby p
+{
+    line-height: 3;
+    margin: 3% auto;
+}
+.form_laby
+{
+    text-align: center;
+}
+
+.precision
+{
+    font-style: italic;
+    font-size: 14px;
+}
+
+.titre_laby
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin: auto;
+    padding: 30px 0 10px 0;
+}
+.btn_validerLaby
+{
+    line-height: inherit;
+    font-family: cursive;
+    display: inline-block;
+    border: 0;
+    background: #EE522F;
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    margin: 0 auto 1% auto;
+    color: white;
+}
+
+.regles_laby
+{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 1% auto;
+}
+
+.carte_laby
+{
+    text-align: center;
+}
+.carte_laby img
+{
+    border: gray solid 1px;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    text-align: justify;
+    line-height: 8px;
+    padding: 5px;
+}
+
+.jeu_laby
+{
+    text-align: center;
+}
+
+.form_robot
+{
+    visibility: hidden;
+}
+
+.laby_affiche_solution
+{
+    text-align: end;
+    font-size: 18px;
+    margin: 1%;
+    color: #543B7D;
+}
+.laby_affiche_solution a
+{
+    color: #543B7D
+}
+
+.laby_solution
+{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin: 5% auto;
+    line-height: 5px;
+    padding: 5px;
+}
+
+.laby_mauvaise_saisie
+{
+    font-size: 20px;
+    color: #EE522F;
+    text-align: center;
+    font-size: 18px;
+}
+
+.rejouer
+{
+    font-family: cursive;
+    display: inline-block;
+    border: 0;
+    background: #EE522F;
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    margin: 0 auto 1% auto;
+}
+.rejouer a
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+/* PENDU */
+.jeu_pendu
+{
+    line-height: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.score_pendu
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5% 0 5%;
+}
+.score_pendu .gagne
+{
+    color: #3A80A7;
+}
+.score_pendu .perdu
+{
+    color: #EE522F;
+}
+
+.lettre_rate, .lettre_trouve
+{
+    color: #3A80A7;
+    font-weight: bold;
+}
+
+.affichage_pendu
+{
+    display: flex; 
+    justify-content: space-around; 
+    font-size: 18px; 
+    font-weight: bold;
+    margin: auto 2%;
+}
+.mot_a_trouver, .nb_essai
+{
+    align-self: center;
+}
+.mot_a_trouver
+{
+    flex-grow: 2;
+    font-size: 22px;
+}
+
+.form_pendu, .liste_lettre, .pendu_mauvaise_saisie, .form_laby, .laby_mauvaise_saisie
+{
+    font-size: 19px;
+}
+.form_pendu
+{
+    margin: 3% auto;
+    text-align: center;
+}
+.liste_lettre
+{
+    order: 5;
+}
+.mot_gagne
+{
+    font-size: 22px;
+    font-weight: bold;
+    color: #3A80A7;
+    text-align: center;    
+    font-size: 20px;
+}
+.defaite_pendu
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin-left: 35%;
+}
+.mot_perdu
+{
+    font-size: 22px;
+    font-weight: bold;
+    color: #EE522F;
+}
+
+.rejouer_pendu
+{
+    text-align: center;
+    margin: 6% auto 0 auto;
+}
+
+.attention_pendu
+{
+    color: #EE522F;
+}
+
+
+
+/********************************************************************************/
+/********************************** RESPONSIVE **********************************/
+@media all and (max-width: 1024px)
+{
+    /* GENERALE */
+    h1
+    {
+        font-size: 18px;
+    }
+    /* CONNEXION et INSCRIPTION */   
+    .formulaires
+    {
+        flex-direction: column;
+    }
+    .form_connexion, .form_inscription
+    {
+        margin: 3% 0;
+    }
+    .btn_connexion
+    {
+        border: 1px solid black;
+    }
+    /* ACCUEIL */
+    .bloc_img
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bloc_img img
+    {
+        margin: 2% 0;
+    }
+
+    /* CITROUILLES */
+    .plateau_jeu
+    {
+        height: 150px;
+        width: 600px;
+    }
+
+    /* PENDU */
+    .affichage_pendu, .mot_a_trouver
+    {
+        font-size: 14px;
+    }
+    .defaite_pendu
+    {
+        margin-left: 1%;
+    }
+}
+
